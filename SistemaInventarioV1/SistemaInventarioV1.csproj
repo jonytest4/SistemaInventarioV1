@@ -14,12 +14,17 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SistemaInventarioV1.AccesoDatos\SistemaInventarioV1.AccesoDatos.csproj" />
     <ProjectReference Include="..\SistemaInventarioV1.Modelos\SistemaInventarioV1.Modelos.csproj" />
     <ProjectReference Include="..\SistemaInventarioV1.Utilidades\SistemaInventarioV1.Utilidades.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
   </ItemGroup>
 
 </Project>
