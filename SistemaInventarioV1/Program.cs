@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using SistemaInventarioV1.AccesoDatos.Data; 
+using SistemaInventarioV1.AccesoDatos.Data;
+using SistemaInventarioV1.AccesoDatos.Repositorio;
+using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 //agregado de addRazorRuntimeCompilation para que el aplicativo pueda hacer visible los ajustes en tiempo real
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+//Servicio del repositorio genérico UnidadTrabajo accesible en cualquier momento o controlador
+//AddScoped permite que la instancia de servicio se cree una vez y pueda seguirse usando las veces que sea necesario
+builder.Services.AddScoped<IUnidadTrabajo, UnidadTrabajo>();
 
 var app = builder.Build();
 
