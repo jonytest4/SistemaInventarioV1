@@ -1,5 +1,6 @@
 ﻿using SistemaInventarioV1.AccesoDatos.Data;
 using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
+using SistemaInventarioV1.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,13 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
         private readonly ApplicationDbContext _db;
         //creación de propiedades para cada repositorio a trabajar
         public IBodegaRepositorio Bodega { get; private set; }
-        //constructor
+        public ICategoriaRepositorio Categoria { get; private set; }
+        //constructor ** se debe ingresar dentro del constructor la inicializacion de lso repositorios
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Bodega = new BodegaRepositorio(_db);
+            Categoria = new CategoriaRepositorio(_db);
         } 
 
         public void Dispose()
