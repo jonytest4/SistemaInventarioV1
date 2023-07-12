@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <h2 class="text-primary">Lista de Bodegas</h2>
+    </div>
+    <div> 
+        <!--asp-action me permite hacer llamada a una vista-->
+        <a class="btn btn-outline-primary" asp-action="Upsert"><i class="bi bi-plus-square-fill"></i> Crear nueva Bodega</a>
+    </div>
+</div>
+
+<br />
+
+<!--Tabla-->
+<div class="p-4 border rounded bg-light">
+    <!--Colocar Id para referenciar-->
+    <table id="tblDatos" class="table table-responsive table-hover">
+        <thead class="table-dark">
+            <!--tr: filas th: columnas-->
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<!--llamada al archivo js creado-->
+@section Scripts{
+    <!--direccionamiento del directorio del que deso llamar los js-->
+    <script src="~/js/bodega.js"></script>
+}

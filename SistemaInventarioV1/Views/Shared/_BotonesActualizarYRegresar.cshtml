@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!--Esta vista recibire el dato id por eso requiere de un modelo-->
+@model int
+
+<div class="d-grid gap-2 d-md-block">
+    <!--agrego el asp-route-nombre del parámetro a pasar del controlador en este caso id = "arrobaModel" del modelo generado de tipo int -->
+    <button type="submit" class="btn btn-primary" onfocus="false" asp-route-id = "@Model" > <i class="bi bi-pencil-square"></i> Actualizar</button>
+    <!--No se da mucho detalle del controlador por que la acción deseada se ejecutar sobre el controlador en el que se encuentra-->
+    <a asp-action="Index" class="btn btn-success"> <i class="bi bi-arrow-return-left"></i> Regresar</a>
+</div>

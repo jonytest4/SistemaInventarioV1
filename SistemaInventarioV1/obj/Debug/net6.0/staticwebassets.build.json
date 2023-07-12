@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DGFJ13+RuelVFCdooLciXBiugMQAFXefJqNN32QtCWg=",
+  "Hash": "kEqP6g3s0RiHLSthee9aZnAxKpGWdLhyDioBCHgADDY=",
   "Source": "SistemaInventarioV1",
   "BasePath": "_content/SistemaInventarioV1",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\bodega.js",
+      "SourceId": "SistemaInventarioV1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\",
+      "BasePath": "_content/SistemaInventarioV1",
+      "RelativePath": "js/bodega.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bodega.js"
     },
     {
       "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\site.js",

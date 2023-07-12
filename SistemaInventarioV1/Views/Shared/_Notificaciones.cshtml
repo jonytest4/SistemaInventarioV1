@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!--Uso de utilidades DS-->
+@using SistemaInventarioV1.Utilidades
+
+@if (TempData[DS.Exitosa] != null)
+{
+    <!--Librerías para poder realizar notificaciones copiadas desde _Layout-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!---->
+    <script type="text/javascript"> 
+        //invocación de la librería toastr.nomrecualquiera
+        toastr.success('@TempData[DS.Exitosa]');
+    </script > 
+}
+
+@if (TempData[DS.Error] != null)
+{
+    <!--Librerías para poder realizar notificaciones copiadas desde _Layout-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!---->
+    <script type="text/javascript">
+        //invocación de la librería toastr.nomrecualquiera
+        toastr.error('@TempData[DS.Error]');
+    </script>
+}
