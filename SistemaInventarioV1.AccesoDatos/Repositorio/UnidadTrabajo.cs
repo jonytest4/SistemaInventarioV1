@@ -17,12 +17,14 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
         //creación de propiedades para cada repositorio a trabajar
         public IBodegaRepositorio Bodega { get; private set; }
         public ICategoriaRepositorio Categoria { get; private set; }
-        //constructor ** se debe ingresar dentro del constructor la inicializacion de lso repositorios
+        public IMarcaRepositorio Marca { get; private set; }
+        //constructor ** se debe ingresar dentro del constructor la inicializacion de los repositorios
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Bodega = new BodegaRepositorio(_db);
             Categoria = new CategoriaRepositorio(_db);
+            Marca = new MarcaRepositorio(_db);
         } 
 
         public void Dispose()

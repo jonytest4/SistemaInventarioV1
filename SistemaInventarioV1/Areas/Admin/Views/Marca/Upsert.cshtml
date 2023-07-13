@@ -1,0 +1,99 @@
+﻿<!--incorporar el modelo bodega para que reciba directamente desde el controlador-->
+<!--Uso de Partial Views para diseños que se repiten permitiendo usar en otras vistas, se identifican por iniciar con "_Nombre"-->
+@model SistemaInventarioV1.Modelos.Marca
+@{
+    //ViewData["Title"] = "Upsert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //variable título puede cambiar dependiendo el caso
+    var titulo = "Crear Marca";
+}
+
+<form method="post">
+    <div style="padding-left:15%; padding-right:15%; padding-bottom:inherit.4rem;">
+        <div class="row border-0">
+            <!--validation-summary hace que todas mis validaciones del modelo aparescan en la vista-->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+        <!--verificación de título-->
+        @if(Model.Id != 0)
+        {
+            //Actualizar
+            titulo = "Actualizar Marca";
+            //paso del id sin que sea vista, uso de asp-for para acceso a la propiedad del modelo
+            <input type="hidden" asp-for="Id" id="id"/>
+        }
+        <!--impresión del título-->
+        <div class="col-12 border-bottom p-0">
+            <h2 class="text-primary">@titulo</h2>
+        </div>
+        <!--petición de datos del form-->
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <labe>Nombre</labe>
+                <input type="text" asp-for="Nombre" class="form-control" placeholder="Nombre de la Marca" id="nombre"/>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <labe>Descripción</labe>
+                <input type="text" asp-for="Descripcion" class="form-control" placeholder="Descripción de la Marca"/>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <labe>Estado</labe>
+                <select asp-for="Estado" class="form-select">
+                    <option value=true>Activo</option>
+                    <option value=false>Inactivo</option>
+                </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <!--llamado a vistas parciales de botones-->
+        <div>
+            @if(Model.Id != 0)
+            {
+                <partial name = "_BotonesActualizarYRegresar" model="Model.Id" />
+            }
+            else
+            {
+                <partial name = "_BotonesCrearYRegresar" />
+            }
+            
+        </div>
+    </div>
+</form>
+
+<!--informe de errores a nivel cliente del modelo usando _ValidationScriptsPartial-->
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial" />
+    <!--desarrollo del script de validación de nombre usando las etiquetas id="id", id="nombre"-->
+    <script>
+        //verificar cuando el nombre cambie su valor
+        document.getElementById("nombre").addEventListener('change', function(){
+            //funcion a utilizar
+            validarNombre();
+        });
+
+        function validarNombre(){
+            //url del método validarNombre desde el controlador
+            var url = '@Url.Content("~/")' + "Admin/Marca/ValidarNombre";
+            var id = '#id';
+            var nombre = '#nombre';
+            //captura en Json para invocar los valores capturados
+            $.getJSON(url, { id: $(id).val(), nombre: $(nombre).val() }, function (data) {
+                $.each(data, function(key,value){
+                    if(value){
+                        var nombre = document.getElementById("nombre");
+                        //invocación del sweat alert
+                        swal("Error","Nombre ya existe","error");
+                        nombre.value = "";
+                    }
+                });
+            })
+        }
+    </script>
+}

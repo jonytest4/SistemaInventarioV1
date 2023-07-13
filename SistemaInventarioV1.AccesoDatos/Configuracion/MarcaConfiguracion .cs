@@ -12,9 +12,9 @@ namespace SistemaInventarioV1.AccesoDatos.Configuracion
     //Contenido del fluentAPI que nos permite abarcar más características
     //heredamos IEntityTypeConfiguration para un tipo de modelo
     //configurar DBContext
-    public class BodegaConfiguracion : IEntityTypeConfiguration<Bodega>
+    public class MarcaConfiguracion : IEntityTypeConfiguration<Marca>
     {
-        public void Configure(EntityTypeBuilder<Bodega> builder)
+        public void Configure(EntityTypeBuilder<Marca> builder)
         {
             //un builder por cada propiedad del modelo se incluye las condiciones
             builder.Property(x => x.Id).IsRequired();

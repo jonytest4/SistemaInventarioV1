@@ -15,6 +15,7 @@ namespace SistemaInventarioV1.AccesoDatos.Data
         //Se agrega cada nuevop modelo una ves configurado el archivo de configuración de FLuent API
         public DbSet<Bodega> Bodegas { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
 
         //override para el FLuentAPI para cambiar sus caracteristicas//
         //permitirá que nuestros archivos de configuración creados  haga un override de lo que actualmente existe
