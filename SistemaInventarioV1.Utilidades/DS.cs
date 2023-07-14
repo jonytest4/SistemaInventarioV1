@@ -12,5 +12,8 @@ namespace SistemaInventarioV1.Utilidades
         //Constantes a ser utilizadas en visata parcial notificaciones
         public const string Exitosa = " Exitosa";
         public const string Error = "Error";
+
+        //Constante para acceder al directorio donde se guardarán las imágenes
+        public const string ImagenRuta = @"\img\producto\";
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1KROKblwiTwNOKtuMPPGG2muyc8aMj8fyzYh9ldkH48=",
+  "Hash": "Yt01UGonzm6/e5LmStOk8RqVvgtPSN9LHHbOKyuW1p4=",
   "Source": "SistemaInventarioV1",
   "BasePath": "_content/SistemaInventarioV1",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\2c021866-9e98-4a0a-a3b7-4c54df7cdf37.JPG",
+      "SourceId": "SistemaInventarioV1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\",
+      "BasePath": "_content/SistemaInventarioV1",
+      "RelativePath": "img/producto/2c021866-9e98-4a0a-a3b7-4c54df7cdf37.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\producto\\2c021866-9e98-4a0a-a3b7-4c54df7cdf37.JPG"
+    },
+    {
       "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\bodega.js",
       "SourceId": "SistemaInventarioV1",
       "SourceType": "Discovered",
@@ -1154,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\marca.js"
+    },
+    {
+      "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\producto.js",
+      "SourceId": "SistemaInventarioV1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\",
+      "BasePath": "_content/SistemaInventarioV1",
+      "RelativePath": "js/producto.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\producto.js"
     },
     {
       "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\site.js",

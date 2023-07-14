@@ -61,7 +61,7 @@ function loadDataTable() {
 function Delete(url) {
     //invocación de la librería sweetalert
     swal({
-        title: "¿Esta seguro de eliminar la categoría?",
+        title: "¿Esta seguro de eliminar la marca?",
         text: "Este registro no se podrá recuperar",
         icon: "warning",
         buttons: true,

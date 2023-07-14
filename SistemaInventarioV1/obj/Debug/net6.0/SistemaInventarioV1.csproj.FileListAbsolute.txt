@@ -552,3 +552,5 @@ D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runt
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
