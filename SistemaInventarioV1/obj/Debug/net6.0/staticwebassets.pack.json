@@ -13,8 +13,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono.ico",
+      "PackagePath": "staticwebassets\\img\\icono.ico"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono.png",
+      "PackagePath": "staticwebassets\\img\\icono.png"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\1e1e3e86-c460-40ec-b426-2941547517b8.JPG",
+      "PackagePath": "staticwebassets\\img\\producto\\1e1e3e86-c460-40ec-b426-2941547517b8.JPG"
+    },
+    {
       "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\2c021866-9e98-4a0a-a3b7-4c54df7cdf37.JPG",
       "PackagePath": "staticwebassets\\img\\producto\\2c021866-9e98-4a0a-a3b7-4c54df7cdf37.JPG"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\42458a72-cd19-40b0-80d7-e0e874eb04d4.JPG",
+      "PackagePath": "staticwebassets\\img\\producto\\42458a72-cd19-40b0-80d7-e0e874eb04d4.JPG"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\4edf9dd5-3bd0-4da0-b3b7-5f1fae69b25d.JPG",
+      "PackagePath": "staticwebassets\\img\\producto\\4edf9dd5-3bd0-4da0-b3b7-5f1fae69b25d.JPG"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\d09a7d56-b234-4936-aafa-08f0fd98b7eb.JPG",
+      "PackagePath": "staticwebassets\\img\\producto\\d09a7d56-b234-4936-aafa-08f0fd98b7eb.JPG"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\d1859649-99e5-4b58-a4be-e95d61bb17b4.jpg",
+      "PackagePath": "staticwebassets\\img\\producto\\d1859649-99e5-4b58-a4be-e95d61bb17b4.jpg"
     },
     {
       "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\js\\bodega.js",
