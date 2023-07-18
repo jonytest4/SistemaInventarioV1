@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SistemaInventarioV1.Modelos.Producto>
+﻿@model SistemaInventarioV1.Modelos.EspecificacionPag.PagesList<SistemaInventarioV1.Modelos.Producto>
 <!--utilidad para desplegar la imagen-->
 @using SistemaInventarioV1.Utilidades
 @{
@@ -16,13 +16,18 @@
 <!--Seccion para mostrar los datos necesarios-->
 <section>
     <div class="container my-2">
-        <div class="col-lg-6 col-md-6 col-sm-6 d-flex">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="button-addon2"/>
-                <button class="btn btn-outline-primary"><i class="bi bi-search"></i> </button>
+        <form asp-action="Index" method="get">
+            <div class="col-lg-6 col-md-6 col-sm-6 d-flex">
+                <div class="input-group mb-3">
+                    <!--Encapsulado en un form para el paso de datos por un formulario-->
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="button-addon2" 
+                        name="busqueda" value="@ViewData["BusquedaActual"]"
+                    />
+                    <button type="submit" class="btn btn-outline-primary"><i class="bi bi-search"></i> </button>
 
+                </div>
             </div>
-        </div>
+        </form>
         <div class="row">
             @foreach(var producto in Model)
             {
@@ -33,7 +38,7 @@
                             <h5 class="card-title">
                                 @producto.Descripcion
                             </h5>
-                            <p class="card-text">$ @String.Format("{0:#,##0.000}", producto.Precio) </p>
+                            <p class="card-text">$ @String.Format("{0:#,##0.00}", producto.Precio) </p>
                             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto bg-white">
                                 <a href="#" class="btn btn-outline-primary"><i class="bi bi-tags"></i> </a>
                             </div>
@@ -42,5 +47,20 @@
                 </div>
             }
         </div>
+        <!--botones de enlace-->
+        <a asp-action="Index" asp-route-PagNumber="@(1)" class="btn btn-outline-primary" asp-route-busquedaActual="@ViewData["BusquedaActual"]">
+            <i class="bi bi-caret-left-square"></i>
+        </a>
+        <a asp-action="Index" asp-route-PagNumber="@((int)ViewData["PageNumber"]-1)" asp-route-busquedaActual="@ViewData["BusquedaActual"]" class="btn btn-outline-primary @ViewData["Previo"]">
+            Anterior
+        </a>
+        <span>Página @ViewData["PageNumber"] de @ViewData["TotalPaginas"]</span>
+        <a asp-action="Index" asp-route-PagNumber="@((int)ViewData["PageNumber"]+1)" asp-route-busquedaActual="@ViewData["BusquedaActual"]" class="btn btn-outline-primary @ViewData["Siguiente"]">
+            Siguiente
+        </a>
+        <a asp-action="Index" asp-route-PagNumber="@ViewData["TotalPaginas"]" asp-route-busquedaActual="@ViewData["BusquedaActual"]" class="btn btn-outline-primary">
+            <i class="bi bi-caret-right-square"></i>
+        </a>
+        
     </div>
 </section>

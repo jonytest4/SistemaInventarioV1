@@ -2,6 +2,7 @@
 using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
 using SistemaInventarioV1.Modelos;
 using SistemaInventarioV1.Modelos.ErrorViewModels;
+using SistemaInventarioV1.Modelos.EspecificacionPag;
 using System.Diagnostics;
 
 namespace SistemaInventarioV1.Areas.Inventario.Controllers
@@ -19,12 +20,53 @@ namespace SistemaInventarioV1.Areas.Inventario.Controllers
             _logger = logger;
             _unidadTrabajo = unidadTrabajo;
         }
-
-        public async Task<IActionResult> Index()
+        //Index metodo de paginación y búsqueda
+        public IActionResult Index(int pagNumber = 1, string busqueda="", string busquedaActual="")
         {
-            //lisatado de los productos
-            IEnumerable<Producto> productoLista = await _unidadTrabajo.Producto.ObtenerTodos();
-            return View(productoLista);
+            //validación de busqueda
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                pagNumber = 1;
+            }
+            else
+            {
+                busqueda = busquedaActual;
+            }
+            ViewData["BusquedaActual"] = busqueda;
+            //validaciones para la paginación
+            if(pagNumber < 1)
+            {
+                pagNumber = 1;
+            }
+            //instancia de parámetros
+            Parametros parametros = new Parametros()
+            {
+                PagNumber = pagNumber,
+                //PageSize se puede cambiar para mostrar más productos en la página principal
+                PageSize = 4
+            };
+            //variable para cargar los datos necesarios en memoria
+            var resultado = _unidadTrabajo.Producto.ObtenerTodosPaginado(parametros);
+            //caragar datos de busqueda en la variable resultado
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                resultado = _unidadTrabajo.Producto.ObtenerTodosPaginado(parametros, p => p.Descripcion.Contains(busqueda));
+            }
+            ViewData["TotalPaginas"] = resultado.metadata.TotalPages;
+            ViewData["TotalRegistros"] = resultado.metadata.TotalCount;
+            ViewData["PageSize"] = resultado.metadata.PageSize;
+            ViewData["PageNumber"] = pagNumber;
+            ViewData["Previo"] = "disabled"; // clase css para desactivar botones
+            ViewData["Siguiente"] = "";
+
+            if(pagNumber > 1)
+            {
+                ViewData["Previo"] = "";
+            }
+            if(resultado.metadata.TotalPages <= pagNumber) {
+                ViewData["Siguiente"] = "disabled";
+            }
+            return View(resultado);
         }
 
         public IActionResult Privacy()

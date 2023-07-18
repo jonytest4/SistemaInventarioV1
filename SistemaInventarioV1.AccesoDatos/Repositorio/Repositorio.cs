@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SistemaInventarioV1.AccesoDatos.Data;
 using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
+using SistemaInventarioV1.Modelos.EspecificacionPag;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,6 +66,37 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
 
             return await query.ToListAsync();
         }
+        public PagesList<T> ObtenerTodosPaginado(Parametros parametros, Expression<Func<T, bool>> filtro = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string incluirPropiedades = null, bool isTracking = true)
+        {
+            //conf propiedad de consulta
+            IQueryable<T> query = dbSet;
+            //trbajamos con cada parámetro
+            //filtro
+            if (filtro != null)
+            {
+                query = query.Where(filtro); //equivalente a un Select * from where ...
+            }
+            //incluir propiedades
+            if (incluirPropiedades != null)
+            {
+                foreach (var incluirPro in incluirPropiedades.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incluirPro);  //el include retorn las propiedades relacionadas al objeto ejemplo categoría,marca
+                }
+            }
+            //orderBy
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+
+            }
+            //isTracking
+            if (!isTracking)
+            {
+                query = query.AsNoTracking();
+            }
+            return PagesList<T>.ToPagesList(query, parametros.PagNumber, parametros.PageSize);
+        }
         public async Task<T> ObtenerPrimero(Expression<Func<T, bool>> filtro = null, string incluirPropiedades = null, bool isTracking = true)
         {
             //conf propiedad de consulta
@@ -101,5 +133,7 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
         {
             dbSet.RemoveRange(entidad);
         }
+
+        
     }
 }

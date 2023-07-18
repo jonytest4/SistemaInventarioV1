@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaInventarioV1.Modelos.EspecificacionPag;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -24,6 +25,17 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio
            //linea para acceder a una lista de objeto y en ese momento tambien se lo quiera modifcar
            bool isTracking = true
             );
+        //obtención de la pagList (paginación)
+        PagesList<T> ObtenerTodosPaginado(Parametros parametros,
+           //Expression funciona como filtro para filtrar la lista obtenida en base a un funcion con objeto y booleano
+           Expression<Func<T, bool>> filtro = null,
+           //Linea para ordenar la lista que en la funcion recibe los datos y los ordena
+           Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+           //linea que se encarga de hacer todos los enlaces con los otros objetos ejemplo categoría y marca
+           string incluirPropiedades = null,
+           //linea para acceder a una lista de objeto y en ese momento tambien se lo quiera modifcar
+           bool isTracking = true
+           );
         //obtener el primer objeto
         Task<T> ObtenerPrimero(
            Expression<Func<T, bool>> filtro = null,
