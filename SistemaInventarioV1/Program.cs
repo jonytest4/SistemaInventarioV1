@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using SistemaInventarioV1.AccesoDatos.Data;
 using SistemaInventarioV1.AccesoDatos.Repositorio;
 using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
+using SistemaInventarioV1.Utilidades;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,13 +14,26 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+//AddDefaultIdentity no permite trabajar con roles y se lo modifica por AddIdentity y se agrega ,IdentityRole
+//options.SignIn.RequireConfirmedAccount = true se cambia true por false si aún no se configura la confirmación de email
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+    //añadimos el tokenProvider  que permite trabajar con el email seder
+    .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 //agregado de addRazorRuntimeCompilation para que el aplicativo pueda hacer visible los ajustes en tiempo real
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-//Servicio del repositorio gen�rico UnidadTrabajo accesible en cualquier momento o controlador
+
+//Servicio del repositorio gen�rico UnidadTrabajo accesible en cualquier momento o controlador
 //AddScoped permite que la instancia de servicio se cree una vez y pueda seguirse usando las veces que sea necesario
 builder.Services.AddScoped<IUnidadTrabajo, UnidadTrabajo>();
+
+//Una vez configurado el servicio de Identity, se muetra un error para ejecutar páginas razor, agregamos este servicio para evitar el error
+builder.Services.AddRazorPages();
+
+//Agregamos el servicio de EmailSender para evitar el error de Email el archivo se encuentra en Utilidades
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 

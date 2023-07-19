@@ -15,5 +15,9 @@ namespace SistemaInventarioV1.Utilidades
 
         //Constante para acceder al directorio donde se guardarán las imágenes
         public const string ImagenRuta = @"\img\producto\";
+        //Constante para dar roles a los usuarios
+        public const string RolAdmin = "Admin";
+        public const string RolCliente = "Cliente";
+        public const string RolInventario = "Inventario";
     }
 }

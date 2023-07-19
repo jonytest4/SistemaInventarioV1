@@ -22,8 +22,6 @@ D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
-D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -107,14 +105,11 @@ D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Features.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Http.dll
-D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
-D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -554,3 +549,4 @@ D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runt
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
