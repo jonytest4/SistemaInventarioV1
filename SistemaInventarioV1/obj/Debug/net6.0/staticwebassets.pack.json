@@ -13,12 +13,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\Logo.PNG",
+      "PackagePath": "staticwebassets\\img\\Logo.PNG"
+    },
+    {
       "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono.ico",
       "PackagePath": "staticwebassets\\img\\icono.ico"
     },
     {
       "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono.png",
       "PackagePath": "staticwebassets\\img\\icono.png"
+    },
+    {
+      "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono1.ico",
+      "PackagePath": "staticwebassets\\img\\icono1.ico"
     },
     {
       "Id": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\1e1e3e86-c460-40ec-b426-2941547517b8.JPG",

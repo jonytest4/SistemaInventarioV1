@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i1GsVz1CUf/6ClqSofukXGBQAxQ31jEYLn0RtV2DzDc=",
+  "Hash": "efychJAwB2Nj+248hxW+XzsQckRLgfmpu+6l8tByLeA=",
   "Source": "SistemaInventarioV1",
   "BasePath": "_content/SistemaInventarioV1",
   "Mode": "Default",
@@ -1137,6 +1137,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icono.png"
+    },
+    {
+      "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\icono1.ico",
+      "SourceId": "SistemaInventarioV1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\",
+      "BasePath": "_content/SistemaInventarioV1",
+      "RelativePath": "img/icono1.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icono1.ico"
+    },
+    {
+      "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\Logo.PNG",
+      "SourceId": "SistemaInventarioV1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\",
+      "BasePath": "_content/SistemaInventarioV1",
+      "RelativePath": "img/Logo.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo.PNG"
     },
     {
       "Identity": "D:\\CursoASP.NETMVC\\SistemaInventarioV1\\SistemaInventarioV1\\wwwroot\\img\\producto\\1e1e3e86-c460-40ec-b426-2941547517b8.JPG",
