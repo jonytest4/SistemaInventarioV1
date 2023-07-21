@@ -17,10 +17,22 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 //AddDefaultIdentity no permite trabajar con roles y se lo modifica por AddIdentity y se agrega ,IdentityRole
 //options.SignIn.RequireConfirmedAccount = true se cambia true por false si aún no se configura la confirmación de email
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+    //añadimos la toma de mensajes de error para la contraseña es decir la clase de utilidades
+    .AddErrorDescriber<ErrorDescriber>()
     //añadimos el tokenProvider  que permite trabajar con el email seder
     .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+//cambio de las reglas de la contraseña en utilidades se encuentra el manejo de mensajes
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 12;
+    options.Password.RequiredUniqueChars = 1;
+});
 
 //agregado de addRazorRuntimeCompilation para que el aplicativo pueda hacer visible los ajustes en tiempo real
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();

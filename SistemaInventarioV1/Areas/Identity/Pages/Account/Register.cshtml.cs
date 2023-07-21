@@ -82,7 +82,7 @@ namespace SistemaInventarioV1.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "El email es requerido")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -91,8 +91,8 @@ namespace SistemaInventarioV1.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = "La contraseña es requerida")]
+            [StringLength(18, ErrorMessage = "La contraseña debe tener al menos {2} y un máximo de {1} caracteres.", MinimumLength = 12)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -103,19 +103,24 @@ namespace SistemaInventarioV1.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Las contraseñas no coincide")]
             public string ConfirmPassword { get; set; }
             public string PhoneNumber { get; set; }
-            [Required]
+            [Required(ErrorMessage = "Los nombres son requeridos")]
+            [MaxLength(100)]
             public string Nombres { get; set; }
-            [Required]
+            [Required(ErrorMessage = "Los apellidos son requeridos")]
+            [MaxLength(100)]
             public string Apellidos { get; set; }
-            [Required]
+            [Required(ErrorMessage = "La dirección es requerida")]
+            [MaxLength(200)]
             public string Direccion { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "La ciudad es requerido")]
+            [MaxLength(60)]
             public string Ciudad { get; set; }
-            [Required]
+            [Required(ErrorMessage = "El país es requerido")]
+            [MaxLength(60)]
             public string Pais { get; set; }
             
             public string Rol { get; set; }
