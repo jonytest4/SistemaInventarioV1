@@ -240,6 +240,16 @@ namespace SistemaInventarioV1.Areas.Identity.Pages.Account
                         
                     }
                 }
+                //recargar la lista de roles al actualizarse o surgir un error de register
+                Input = new InputModel()
+                {
+                    ListaRol = _roleManager.Roles.Where(r => r.Name != DS.RolCliente).Select(n => n.Name).Select(l => new SelectListItem
+                    {
+                        Text = l,
+                        Value = l
+                    })
+                };
+                //Detalla lso errores que suceden al grabar al nuevo usuario
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);

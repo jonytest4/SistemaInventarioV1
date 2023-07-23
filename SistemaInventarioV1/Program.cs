@@ -23,6 +23,14 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+//habilitación de servicio cookie para redireccionar si el usuario no se encuentra autorizado para acceder por su rol
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Account/Logout";
+    options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+});
+
 //cambio de las reglas de la contraseña en utilidades se encuentra el manejo de mensajes
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -66,6 +74,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//Líneas de autorización y autenticación de las páginas
 app.UseAuthentication();
 app.UseAuthorization();
 

@@ -1,15 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using SistemaInventarioV1.AccesoDatos.Repositorio;
 using SistemaInventarioV1.AccesoDatos.Repositorio.IRepositorio;
 using SistemaInventarioV1.Modelos;
 using SistemaInventarioV1.Utilidades;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace SistemaInventarioV1.Areas.Admin.Controllers
 {
     //Referenciar al área que pertenece
     [Area("Admin")]
+    //etiqueta para autorización de acceso
+    [Authorize(Roles = DS.RolAdmin)]
     public class MarcaController : Controller
     {
         //referenciamos la UnidadTrabajo creada del Repositorio Genérico
