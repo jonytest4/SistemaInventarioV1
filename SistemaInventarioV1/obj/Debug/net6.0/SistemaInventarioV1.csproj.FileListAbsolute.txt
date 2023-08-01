@@ -552,3 +552,8 @@ D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\Newt
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\SendGrid.dll
 D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\StarkbankEcdsa.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
+D:\CursoASP.NETMVC\SistemaInventarioV1\SistemaInventarioV1\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll

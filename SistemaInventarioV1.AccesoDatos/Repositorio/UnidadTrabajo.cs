@@ -20,7 +20,9 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
         public IMarcaRepositorio Marca { get; private set; }
         public IProductoRepositorio Producto { get; private set; }
 
-        public IUsuarioAppRepositorio UsuarioApp { get; set; }
+        public IUsuarioAppRepositorio UsuarioApp { get; private set; }
+
+        public IBodegaProductoRepositorio BodegaProducto { get; private set; }
 
         //constructor ** se debe ingresar dentro del constructor la inicializacion de los repositorios
         public UnidadTrabajo(ApplicationDbContext db)
@@ -31,6 +33,7 @@ namespace SistemaInventarioV1.AccesoDatos.Repositorio
             Marca = new MarcaRepositorio(_db);
             Producto = new ProductoRepositorio(_db);
             UsuarioApp = new UsuarioAppRepositorio(_db);
+            BodegaProducto = new BodegaProductoRepositorio(_db);
         } 
 
         public void Dispose()

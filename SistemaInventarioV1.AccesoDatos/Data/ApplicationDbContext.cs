@@ -18,6 +18,7 @@ namespace SistemaInventarioV1.AccesoDatos.Data
         public DbSet<Marca> Marcas { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<UsuarioApp> UsuarioApp { get; set; }
+        public DbSet<BodegaProducto> BodegasProductos { get; set; }
 
         //override para el FLuentAPI para cambiar sus caracteristicas//
         //permitirá que nuestros archivos de configuración creados  haga un override de lo que actualmente existe
